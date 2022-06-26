@@ -1,0 +1,126 @@
+
+<html>  
+<head>  
+<script type="text/javascript" src="app.js">
+    </script>  
+<link rel="stylesheet" href="styles.css">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+</head>
+<body onload=e_sports_analysis()>   
+
+<div>
+<h2 class="section">E-Sports Team/Player Analysis</h2>
+
+<br>
+<div>
+<h3>KD/A Scatter Plot</h3>
+<div id="radio_scatter" class="center_plot">
+        <input type="radio" id="scatter_t1" name="region" value="Cloud9">
+        <label for="Cloud9">Cloud9</label>
+        <input type="radio" id="scatter_t2" name="region" value="Vision Strikers">
+        <label for="Vision Strikers">Vision Strikers</label>
+        <input type="radio" id="scatter_t3" name="region" value="OpTic Gaming">
+        <label for="OpTic Gaming">OpTic Gaming</label>
+
+</div>
+
+<div id="scatter">
+
+    </div>
+    <h4>Plot:</h4>
+    <div id="scatter_plot" class="center_plot">
+    </div>
+
+</div>
+    
+</div>
+<p>
+    This is a scatter plot with each dot representing each players. 
+    The main purpose of this graph was to answer "Which player has the highest kda", and it is kind of obvious to check.
+    <br>
+    However, if you press the button on top, which are the three teams that 
+    I was interested in, you can see the team's specific players. For instance, it was interesting to see Vision Striker to have 
+    players with a big difference of kda, but I found out that Lakia (the player with lower kda) plays supporting character, which is a 
+    character that is hard to get kills. This is also little bit different from my original proposal, but I fixed it for my own interest.
+
+</p>
+
+    
+<div>
+<h3>Average Combat Score Per Map</h3>
+
+      
+<div id="bar">   
+
+    </div>  
+    <h4>Plot:</h4>
+    <div id="bar_plot" class="center_plot">
+        <br>
+        <br>
+    </div>
+    <body>
+            As mentioned in the proposal, this is a bar graph comparing ACS (average combat score) for each map. 
+        I used columns ACS, and map. 
+        This graph answers the question of "Does a certain map makes ACS to drop?", meaning that is there
+        any map that are harder to play. <br>
+        Furthermore, animation of bar graph is added because flipping and changing color is not an animation as 
+        the gradescope regrade suggested. This particular animation is a graph entering one by one. 
+    </body>
+</div>    
+<br>
+<br>
+
+<div>
+<h3>Team K/D/A Graph</h3>
+
+<div id="stacked_bar">
+
+    </div>
+    <h4>Plot:</h4>
+    <div id="stacked_bar_plot" class="center_plot">
+    </div>
+</div>    
+<p>
+    This is stacked bar graph answering the question "What is Team's average kda". I also changed this and wrote it down via gradescope.
+    <br>
+    If you hover over the graph, you can see the average kills of each team. Notice that average k, d, a differs a lot because 
+    some teams had more matches. This made me thought of making standardized version of the graph. 
+
+</p>
+<div>
+<h3>Player Numbers For Different Regions</h3>
+
+<div id="choropleth">
+    </div>
+    <h4>Plot:</h4>
+    <div id="choropleth_graph" class="center_plot">
+    </div>
+</div>
+<p>
+    This is choropleth with blue dots representing players in that country. If the circle is bigger, that means there are more players 
+    from that country. I can see that there are lots of players from North and South America. 
+    <br>
+    I can zoom in through the map using the mouse to anywhere I want as well to see more carefully. 
+
+</p>
+
+<h3>Network Tree for Famous Teams</h3>
+
+<div id="network">
+    </div>
+    <h4>Plot:</h4>
+    <div id="network_graph" class="center_plot">
+    </div>
+</div>
+<p>
+    This is a network with top 5 team as the node. The line represents the relationship between teams for the 
+    average kda and assists.
+    <br>
+
+
+</p>
+   
+</body>  
+</html>  
